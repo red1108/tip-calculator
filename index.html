@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <script src = "index.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class = "card-body">
+                <div class="form">
+                    <h5>Tip Calculator</h5>
+                    <label for="bill">How much was your bill?</label>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">$</span>
+                        </div>
+                        <input type="text" id = "bill" class="form-control" placeholder="bill" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                    <label for="service">How was your service?</label>
+                    <select class="form-control" id = "service">
+                            <option value="0.3">30% - Outstanding</option>
+                            <option value="0.2">20% - Good</option>
+                            <option value="0.15">15% - It is OK</option>
+                            <option value="0.1">10% - Bad</option>
+                            <option value="0.05">5% - terrible</option>
+                    </select>
+                    <br>
+                    <label for="people">How many people are sharing the bill?</label>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">People</span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="number of people" aria-label="Username" aria-describedby="basic-addon1"  id = "people">
+                    </div>
+                    <button type="submit" class="btn btn-primary" onclick="calculate()">Calculate!</button>
+                </div>
+                <hr>
+                <h3 id="answer">Not Calculated yet</h3>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
